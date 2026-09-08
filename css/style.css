@@ -1,6 +1,6 @@
 /* ============================================
-   HEAVEN ESTATE & BUILDER - Premium Website
-   Modern Luxury Real Estate Theme
+   AL RAZI - Real Estate & Construction
+   Premium Website Theme
    ============================================ */
 
 :root {
@@ -1136,7 +1136,7 @@ ul { list-style: none; }
 
 .location-visual {
     position: relative;
-    height: 320px;
+    height: 380px;
     overflow: hidden;
 }
 
@@ -1146,9 +1146,10 @@ ul { list-style: none; }
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    object-position: center center;
     display: block;
-    object-fit: cover;
-    object-position: center;
+    background: #1a1a1a;
     transition: transform 0.6s ease;
 }
 
@@ -2842,4 +2843,144 @@ ul { list-style: none; }
 .author-info span {
     font-size: 0.8rem;
     color: var(--gray);
+}
+
+/* ============================================
+   FEATURED PROPERTIES SECTION
+   ============================================ */
+
+.featured-properties {
+    background: var(--cream);
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.property-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--black-border);
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.property-img {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.property-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover .property-img img {
+    transform: scale(1.08);
+}
+
+.property-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--gold);
+    color: var(--black);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.property-body {
+    padding: 24px;
+}
+
+.property-body h3 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.property-location {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 16px;
+}
+
+.property-location i {
+    color: var(--gold);
+    margin-right: 6px;
+}
+
+.property-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.property-details span {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    background: var(--cream);
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.property-details span i {
+    color: var(--gold);
+    font-size: 0.75rem;
+}
+
+.property-price {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-top: 12px;
+    border-top: 1px solid var(--black-border);
+}
+
+.property-price strong {
+    color: var(--gold-dark);
+    font-size: 1.2rem;
+}
+
+.rental-info {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.btn-sm {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
 }
