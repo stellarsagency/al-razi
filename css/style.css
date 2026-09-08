@@ -2373,6 +2373,11 @@ ul { list-style: none; }
 .office-card p { color: var(--text-light); line-height: 1.8; margin-bottom: 16px; }
 .office-phone { display: inline-flex; align-items: center; gap: 8px; color: var(--gray); font-size: 0.95rem; font-weight: 600; padding: 8px 18px; background: var(--cream); border-radius: 8px; transition: var(--transition); }
 .office-phone:hover { background: var(--gold); color: var(--black); }
+.office-card-with-image { grid-column: 1 / -1; display: flex; align-items: center; gap: 0; padding: 0; overflow: hidden; max-width: 700px; margin: 0 auto; }
+.office-card-with-image .office-image { flex: 1; min-height: 280px; }
+.office-card-with-image .office-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.office-card-with-image .office-info { flex: 1; padding: 34px 30px; text-align: left; }
+.office-card-with-image .office-info .office-icon { margin: 0 0 16px 0; }
 
 @media (max-width: 1024px) {
     .container { padding: 0 20px; }
