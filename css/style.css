@@ -2665,10 +2665,10 @@ ul { list-style: none; }
 
 .property-card { border-radius: var(--radius); overflow: hidden; background: var(--white); box-shadow: var(--shadow-sm); transition: var(--transition); }
 .property-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-gold); }
-.property-img { position: relative; height: 280px; overflow: hidden; background: #f8f8f8; }
-.property-img img { width: 100%; height: 100%; object-fit: contain; transition: var(--transition); }
+.property-img { position: relative; background: #f8f8f8; }
+.property-img img { width: 100%; display: block; transition: var(--transition); }
 .property-card:hover .property-img img { transform: none; }
-.property-badge { position: absolute; top: 12px; left: 12px; background: var(--gold); color: var(--black); font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
+.property-badge { position: absolute; top: 10px; left: 10px; z-index: 2; background: var(--gold); color: var(--black); font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 .property-body { padding: 18px 16px; }
 .property-body h3 { font-family: var(--font-heading); font-size: 1rem; color: var(--text); margin-bottom: 6px; line-height: 1.3; }
 .property-location { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--text-light); margin-bottom: 12px; }
@@ -2683,7 +2683,7 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
     .properties-grid { grid-template-columns: 1fr; gap: 16px; }
-    .property-img { height: 240px; }
+    .property-img img { max-height: 400px; object-fit: contain; }
     .property-body { padding: 16px 14px; }
     .property-body h3 { font-size: 0.95rem; }
     .property-details span { font-size: 0.7rem; padding: 3px 8px; }
@@ -2701,7 +2701,7 @@ ul { list-style: none; }
 
 @media (max-width: 480px) {
     .properties-grid { grid-template-columns: 1fr; gap: 14px; }
-    .property-img { height: 220px; }
+    .property-img img { max-height: 350px; object-fit: contain; }
     .property-badge { font-size: 0.6rem; padding: 4px 10px; }
     .property-body h3 { font-size: 0.9rem; }
     .property-location { font-size: 0.75rem; }
