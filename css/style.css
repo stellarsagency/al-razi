@@ -2984,3 +2984,68 @@ ul { list-style: none; }
         grid-template-columns: 1fr;
     }
 }
+
+/* ---------- Featured Services List ---------- */
+.featured-services-list {
+    background: var(--black);
+}
+
+.featured-services-columns {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.fs-column {
+    flex: 1;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.fs-column-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--gold);
+}
+
+.fs-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fs-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    color: var(--black-light);
+    font-weight: 500;
+    border-bottom: 1px solid var(--black-border);
+}
+
+.fs-list li:last-child {
+    border-bottom: none;
+}
+
+.fs-list li i {
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .featured-services-columns {
+        flex-direction: column;
+    }
+}
